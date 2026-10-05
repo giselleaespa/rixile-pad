@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RIXILE PAD — launch tokens on Solana. Non-custodial, on-chain, transparent." />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>RIXILE PAD — Solana Token Launchpad</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      // Node polyfills required by @solana/spl-token (Buffer) before any app module evaluates.
+      import { Buffer } from 'buffer'
+      window.Buffer = window.Buffer ?? Buffer
+      window.global = window.global ?? window
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
